@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-
+//new
 const generateEmail = () => `aqa+user${Date.now()}@gmail.com`;
 
 test.describe("[smoke] Registration tests", () => {
