@@ -7,7 +7,7 @@ export default class BasePage {
     this.page = page;
   }
 
-  async verifyErrorIsDisplayed(errorText: string) {
+  async verifyErrorIsDisplayed(errorText: string): Promise<void> {
     await expect(this.page.getByText(errorText)).toBeVisible();
   }
 }

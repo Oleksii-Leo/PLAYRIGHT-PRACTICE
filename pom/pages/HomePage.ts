@@ -6,11 +6,11 @@ export default class HomePage extends BasePage {
     '//button[contains(@class,"header_signin")]'
   );
 
-  async open(): Promise<any> {
+  async open(): Promise<void> {
     await this.page.goto("");
   }
 
-  async clickSignInButton(): Promise<any> {
+  async clickSignInButton(): Promise<void> {
     await this.signInButton.click();
   }
 }

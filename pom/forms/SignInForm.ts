@@ -1,5 +1,6 @@
 import { Locator } from "@playwright/test";
 import BasePage from "../BasePage";
+import { step } from "../../helpers/step-decorators";
 
 export default class SignInForm extends BasePage {
   private readonly emailField: Locator = this.page.locator(
@@ -24,6 +25,7 @@ export default class SignInForm extends BasePage {
     await this.loginButton.click();
   }
 
+  @step(`Login with credentials`)
   async loginWithCredentials(email: string, password: string): Promise<any> {
     await this.enterEmail(email);
     await this.enterPassword(password);
