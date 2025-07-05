@@ -34,12 +34,12 @@ test("Подмена имени пользователя на странице �
         body: JSON.stringify(mockResponse),
       });
     } else {
-      // 📛 Если это HTML — просто пропускаем
+      // !
       await route.continue();
     }
   });
 
-  // 🔐 Логин
+  // Log in
   await homePage.open();
   await homePage.clickSignInButton();
   await page.locator("app-signin-modal").waitFor({ state: "visible" });
@@ -51,10 +51,10 @@ test("Подмена имени пользователя на странице �
 
   await expect(page).toHaveURL(/.*garage/);
 
-  // 🧭 Переход в профиль
+  // !!
   await page.goto("/panel/profile");
 
-  // 🕵️ Проверка, что подмена реально сработала
+  // Проверка, что подмена реально сработала
   expect(routeTriggered).toBe(true);
 
   // Проверка имени
