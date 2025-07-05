@@ -14,7 +14,7 @@ test("Подмена имени пользователя на странице �
 
   // !
   await page.route("**/profile", async (route, request) => {
-    // 💡 Только если это XHR-запрос
+    // !!
     if (request.headers()["accept"]?.includes("application/json")) {
       routeTriggered = true;
 
