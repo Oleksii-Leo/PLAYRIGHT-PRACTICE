@@ -12,7 +12,7 @@ test("Подмена имени пользователя на странице �
 
   let routeTriggered = false;
 
-  // ✅ Мокаем XHR-запрос, исключая HTML-загрузку
+  // !
   await page.route("**/profile", async (route, request) => {
     // 💡 Только если это XHR-запрос
     if (request.headers()["accept"]?.includes("application/json")) {
@@ -57,7 +57,7 @@ test("Подмена имени пользователя на странице �
   // 🕵️ Проверка, что подмена реально сработала
   expect(routeTriggered).toBe(true);
 
-  // ✅ Проверка имени
+  // Проверка имени
   const nameLocator = page.locator(".profile_name");
   await expect(nameLocator).toHaveText("Alex Leon 28");
 });
