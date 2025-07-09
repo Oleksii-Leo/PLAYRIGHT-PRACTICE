@@ -1,8 +1,8 @@
 import test, { expect } from "@playwright/test";
-import HomePage from "../pom/pages/HomePage";
-import SignInForm from "../pom/forms/SignInForm";
-import { usersList } from "../test-data/users";
-import AuthController from "../api/controllers/AuthController";
+import HomePage from "../../../pom/pages/HomePage";
+import SignInForm from "../../../pom/forms/SignInForm";
+import { usersList } from "../../../test-data/users";
+import AuthController from "../../../api/controllers/AuthController";
 
 let homePage: HomePage;
 let signInForm: SignInForm;

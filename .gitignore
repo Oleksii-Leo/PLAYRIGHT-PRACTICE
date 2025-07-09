@@ -9,3 +9,4 @@ test-results/
 .env
 allure-results
 results
+test-data/states
