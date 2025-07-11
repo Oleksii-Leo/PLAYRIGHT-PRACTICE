@@ -26,6 +26,7 @@ test.describe("Create users", () => {
       password,
       repeatPassword
     );
+    console.log(await response.json());
     expect(response.status()).toBe(201);
   });
 });
