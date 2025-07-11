@@ -20,6 +20,8 @@ jobs:
         run: npm ci
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
+      - name: Install dotenv
+        run: npm install dotenv
       - name: Run Playwright tests
         run: npx playwright test signIn
       - uses: actions/upload-artifact@v4
